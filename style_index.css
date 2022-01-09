@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.col {
+    float: left;
+}
+
+.col-25 {
+    width: 25%;
+}
+
+/* Header */
+#header {
+    height: 70px;
+    background-color: #2A3132;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.inner-header {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    padding: 0 60px;
+}
+
+.logo{
+    display: block;
+    font-size: 38px;
+    color: aliceblue;
+    padding: 0 40px;
+    font-weight: 700;
+}
+
+.main-menu ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main-menu > ul > li {
+    padding: 25px 20px;
+    /* transition: 1s; */
+}
+
+.main-menu ul li a {
+    font-size: 17px;
+    color: aliceblue;
+}
+
+.ti-icon {
+    padding: 2px;
+    font-size: 15px;
+}
+
+/* Header-hover */
+.main-menu li:hover {
+    border-radius: 10px;
+}
+
+.main-menu li:hover a {
+    color: #FA4647;
+}
+
+.main-menu li:hover .subnav {
+    display: block;
+}
+
+/* Sub-menu */
+.sub-menu {
+    display: none !important;
+    width: 100%;
+    background-color: #202526;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    color: aliceblue;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition-delay: 0.5;
+}
+.main-menu li:hover .sub-menu a{
+    color: aliceblue !important;
+}
+
+.main-menu li:hover .sub-menu {
+    display: flex !important; 
+}
+
+.main-menu li:hover .subsub-menu {
+    display: block !important;
+    padding: 10px;
+}
+
+.main-menu li:hover .subsub-menu li {
+    padding: 10px !important;
+}
+
+.main-menu li:hover .subsub-menu li:hover a{
+    color: #FA4647 !important;
+}
+
+/* Banner */
+#banner {
+    background-image: url(./img/banner2.jpg);
+    width: 100%;
+    height: 100vh;
+    background-size: contain;   
+    background-position: center; 
+}
+
+/* Introduce */
+#introduce {
+    text-align: center;
+    background-color: #eee;
+    padding: 60px;
+}
+
+.sub-introduce {
+    width: 1000px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+.name-store {
+    padding: 20px 0 20px 0;
+    font-size: 40px;
+}
+
+.sub-name-store {
+    padding: 10px 0 20px 0;
+    font-size: 25px;
+}
+
+.content-introduce {
+    padding: 10px;
+    text-align: justify;
+}
+
+.content-introduce p {
+    font-size: 17px ;
+}
+
+/* Footer */
+#footer {
+    text-align: center;
+    background-color: #202526;
+    color: #eee;
+    padding: 30px;
+    height: 450px;
+}
+.logo2 {
+    font-size: 40px;
+    padding: 15px;
+}
+.note-1 {
+    padding-bottom: 25px;
+    margin-bottom: 10px;
+}
+
+.number-phone {
+    font-size: 20px;
+    color: #fff;
+}
+
+#footer .informations{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: justify;
+    padding-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+#footer .informations .infor {
+    max-width: 300px;
+    font-size: 15px;
+    color: #ddd;
+}
+
+#footer .ti-icon-infor {
+    padding-right: 10px;
+    font-size: 30px;
+    align-items: center;
+}
+
+.row-footer {
+    /* display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: left; */
+}
+
+.name-footer-menu {
+    font-size: 18px;
+}
+
+#footer .thingof {
+    padding-top: 20px;
+}
+
+#footer .thingof p {
+    padding-bottom: 20px;
+    color: #ccc;
+}
+
+/* Menu */
+.menu-icon {
+    color: aliceblue;
+    font-size: 38px;
+    padding: 0 10px;
+}
+
+.menu-icon:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.open-menu {
+    display: block !important;
+    /* transition: .1s; */
+}
+
+/* PC */
+@media (min-width: 1024px) {
+    .menu-icon {
+        display: none;
+    }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .main-menu {
+        display: none;
+    }
+
+    .main-menu ul{
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #202526;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .main-menu ul li {
+        padding: 15px 40px;
+    }
+
+    .main-menu li:hover .sub-menu,
+    .main-menu li:hover .subsub-menu
+    {
+        display: none !important;
+    }
+
+    .inner-header {
+        padding: 0 20px;
+    }
+
+    .main-menu li:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 0px;
+    }
+}
+
+/* Phone */
+@media (max-width: 739px) {
+
+}
