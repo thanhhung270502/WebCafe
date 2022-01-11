@@ -24,6 +24,14 @@ body {
     width: 25%;
 }
 
+.col-third {
+    width: calc(100%/3);
+}
+
+.clear {
+    clear: both;
+}
+
 /* Header */
 #header {
     height: 70px;
@@ -127,6 +135,8 @@ body {
     height: 100vh;
     background-size: contain;   
     background-position: center; 
+    /* background-repeat: no-repeat; */
+    padding-top: 10px;
 }
 
 /* Introduce */
@@ -169,61 +179,44 @@ body {
     background-color: #202526;
     color: #eee;
     padding: 30px;
-    height: 450px;
 }
-.logo2 {
+
+#footer .logo-footer {
     font-size: 40px;
     padding: 15px;
-}
-.note-1 {
-    padding-bottom: 25px;
-    margin-bottom: 10px;
+    font-weight: 700;
+    color: #FFC075;
 }
 
-.number-phone {
-    font-size: 20px;
-    color: #fff;
+#footer .footer-informations {
+    margin: 40px 0 25px 0;
+    text-align: left;
 }
 
-#footer .informations{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: justify;
-    padding-bottom: 40px;
-    flex-wrap: wrap;
+#footer .footer-informations .footer-infor {
+    padding: 0 16px;
 }
 
-#footer .informations .infor {
-    max-width: 300px;
-    font-size: 15px;
-    color: #ddd;
+#footer .footer-informations .footer-infor .first-infor {
+    font-size: 28px;
+    padding: 20px 0;
+    font-weight: 600;
+    color: #FFC075;
 }
 
-#footer .ti-icon-infor {
-    padding-right: 10px;
-    font-size: 30px;
-    align-items: center;
-}
-
-.row-footer {
-    /* display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: left; */
-}
-
-.name-footer-menu {
+#footer .footer-informations .footer-infor .mem-infor {
+    line-height: 1.5;
     font-size: 18px;
 }
 
-#footer .thingof {
-    padding-top: 20px;
+#footer .footer-informations .footer-infor .mem-infor a {
+    color: aliceblue;
 }
 
-#footer .thingof p {
-    padding-bottom: 20px;
-    color: #ccc;
+#footer .footer-informations .footer-infor .mem-infor .uil {
+    color: #FFC075;
+    font-size: 22px;
+    padding: 0 5px;
 }
 
 /* Menu */
@@ -249,8 +242,8 @@ body {
     }
 }
 
-/* Tablet */
-@media (min-width: 740px) and (max-width: 1023px) {
+/* Tablet and Mobile  */
+@media (max-width: 1023px) {
     .menu-icon {
         display: block;
     }
@@ -287,9 +280,30 @@ body {
         background-color: rgba(255, 255, 255, 0.1);
         border-radius: 0px;
     }
+
+    #banner {
+        height: 50vh !important;
+    }
+}
+
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    #footer {
+        
+    }
 }
 
 /* Phone */
 @media (max-width: 739px) {
+    .logo {
+        font-size: 28px;
+        padding: 0 20px;
+    }
+
+    .mobile-col {
+        width: 100% !important;
+        padding-bottom: 20px !important;
+    }
 
 }

@@ -44,7 +44,7 @@ ul {
 } */
 
 #just-item {
-    width: 1100px;
+    max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
     padding-top: 150px;
@@ -134,4 +134,16 @@ ul {
 
 #footer .thingof p{
     margin-bottom: 0px !important;
+}
+
+
+/* Phone */
+@media (max-width: 739px) {
+    .col-50 {
+        width: 100% !important;
+    }
+
+    #just-item .name-item {
+        padding-top: 20px;
+    }
 }
